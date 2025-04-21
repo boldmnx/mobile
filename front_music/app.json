@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expoapp",
-    "slug": "expoapp",
+    "name": "front_music",
+    "slug": "front_music",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
