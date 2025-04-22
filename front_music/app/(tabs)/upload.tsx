@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, Button, TextInput, Alert } from "react-native";
 import * as DocumentPicker from "expo-document-picker";
+import { useRouter } from "expo-router";
 
 export default function UploadScreen() {
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState("");
+  const router = useRouter();
 
   const pickFile = async () => {
     const result = await DocumentPicker.getDocumentAsync({
@@ -37,8 +39,10 @@ export default function UploadScreen() {
       const json = await res.json();
       console.log(json);
       Alert.alert("Амжилттай!", "Дуу амжилттай нэмэгдлээ!");
+
       setFile(null);
       setTitle("");
+      router.replace("/");
     } catch (err) {
       console.log(err);
       Alert.alert(`Алдаа", "Сервертэй холбогдож чадсангүй: ${err}`);
