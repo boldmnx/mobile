@@ -7,6 +7,7 @@ export default function Layout() {
         headerStyle: { backgroundColor: "#222" },
         headerTintColor: "#fff",
         headerTitleAlign: "center",
+        title: "#",
       }}
     />
   );

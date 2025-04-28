@@ -42,7 +42,7 @@ export default function UploadScreen() {
 
       setFile(null);
       setTitle("");
-      router.replace("/");
+      router.push("/");
     } catch (err) {
       console.log(err);
       Alert.alert(`Алдаа", "Сервертэй холбогдож чадсангүй: ${err}`);
